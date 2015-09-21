@@ -25,6 +25,7 @@ io.on('connection', function(socket) {
   
   socket.on('disconnect', function () {
     console.log('Someone just disconnected.', io.engine.clientsCount + ' total connections.');
+    io.sockets.emit('usersConnected', io.engine.clientsCount);
   });
 });
 
