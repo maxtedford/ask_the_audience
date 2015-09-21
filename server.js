@@ -9,8 +9,11 @@ app.get("/", function( req, res){
   res.sendFile(__dirname + "/public/index.html")
 });
 
-var port = process.eng.PORT || 3000;
-var server = http.createServer(app)
+const port = process.eng.PORT || 3000;
+
+const server = http.createServer(app)
   .listen(port, function() {
     console.log('Listening on port:' + port);
 });
+
+module.exports = server;
