@@ -16,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/maxtedford/ask_the_audience/issues"
   },
-  "homepage": "https://github.com/maxtedford/ask_the_audience#readme"
+  "homepage": "https://github.com/maxtedford/ask_the_audience#readme",
+  "dependencies": {
+    "express": "^4.13.3",
+    "lodash": "^3.10.1",
+    "socket.io": "^1.3.7"
+  }
 }
