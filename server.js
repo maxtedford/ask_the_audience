@@ -9,7 +9,8 @@ app.get("/", function( req, res){
   res.sendFile(__dirname + "/public/index.html")
 });
 
+var port = process.eng.PORT || 3000;
 var server = http.createServer(app)
-  .listen(3000, function() {
-    console.log('Listening on port 3000.');
+  .listen(port, function() {
+    console.log('Listening on port:' + port);
 });
