@@ -21,6 +21,9 @@ const io = socketIO(server);
 
 io.on('connection', function(socket) {
   console.log('Someone just connected.', io.engine.clientsCount + ' total connections.');
+  socket.on('disconnect', function () {
+    console.log('Someone just disconnected.', io.engine.clientsCount + ' total connections.');
+  });
 });
 
 module.exports = server;
