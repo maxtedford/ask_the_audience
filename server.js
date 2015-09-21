@@ -20,7 +20,7 @@ const server = http.createServer(app)
 const io = socketIO(server);
 
 io.on('connection', function(socket) {
-  console.log('A user has connected.');
+  console.log('Someone just connected.', io.engine.clientsCount + ' total connections.');
 });
 
 module.exports = server;
