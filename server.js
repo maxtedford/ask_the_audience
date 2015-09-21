@@ -19,4 +19,8 @@ const server = http.createServer(app)
 
 const io = socketIO(server);
 
+io.on('connection', function(socket) {
+  console.log('A user has connected.');
+});
+
 module.exports = server;
